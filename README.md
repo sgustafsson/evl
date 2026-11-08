@@ -1,2 +1,2 @@
 # evl
-Englisch Vokablen lerner
+Englisch Vokabeln lernen
