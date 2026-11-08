@@ -1,190 +1,191 @@
-Welcome to Brighton
-My name is
-I'm from
-I'm 11 years old
-in England
-my friend
-too
-by the sea
-the sea
-boy
-girl
-beach
-sand
-seagull
-sky
-stone
-see
-to like
-picture
-to think
-nice
-cool
-Brighton
-small
-great
-hot
-cold
-Nict to meet you
-How old are you?
-Are you ..?
-Where are you from?
-where
-hometown
-town
-hello
-today
-I'm fine
-can
-to live
-to fly
-tour of
-Germany
-bye
-goodbye
-garden
-the gardens are great
-park
-game
-bag
-ball
-bike
-dog
-grass
-flower
-sandwich
-tree
-something
-blue
-No that's wrong
-Yes that is right
-now
-It is your turn
-your
-to spell
-spelling
-colour
-red
-yellow
-orange
-bluegreen
-brown
-Germanypink
-purple
-white
-black
-to find 
-banana
-to have
-wrong
-school
-new
-at
-year
-please
-uniform
-awesome
-class
-let me show you
-me
-to show
-our
-classroom
-we 
-family
-families
-let us sing 
-us
-blazer
-tie
-thing
-to know
-thank you
-thanks
-with
-dot
-double
-to sit
-together
-Mr. Lee
-Mrs. Lee
-to teach
-art
-history
-class teacher
-poem
-day
-song
-book
-to go
-to speak
-French
-to read
-to watch a film
-but
-I don't have
-so cool
-board
-chair
-desk
-exercise book
-pencil case
-pencil
-schoolbag
-student
-marker
-pen
-rubber
-ruler
-sharpner
-no
-problem
-here you are
-Simon says
-world
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-Sunday
-on Monday
-on Mondays
-pet
-cute
-scary
-boring
-cat
-budgie
-fish
-guinea pig
-parrot
-rabbit
-snake
-spider
-under
-need
-I do not like
-more
-animal
-hobby
-hobbies
-football
-to run
-music
-to swim
-dance
-what
-What about you?
-if
-to need
-at home
-This is
-street
-It's called
-road
-car
-house
-a lot of
-lots of
+Welcome to Brighton; Willkommen in Brighton
+My name is; Mein Name ist
+I'm from; Ich komme aus
+I'm 11 years old; Ich bin 11 Jahre alt
+in England; in England
+my friend; mein Freund
+too; auch
+by the sea; am Meer
+the sea; das Meer
+boy; Junge
+girl; Mädchen
+beach; Strand
+sand; Sand
+seagull; Möwe
+sky; Himmel
+stone; Stein
+see; sehen
+to like; mögen
+picture; Bild
+to think; denken
+nice; nett
+cool; cool
+Brighton; Brighton
+small; klein
+great; großartig
+hot; heiß
+cold; kalt
+Nict to meet you; Schön, dich kennenzulernen
+How old are you?; Wie alt bist du?
+Are you ..?; Bist du ..?
+Where are you from?; Woher kommst du?
+where; wo
+hometown; Heimatstadt
+town; Stadt
+hello; hallo
+today; heute
+I'm fine; Mir geht es gut
+can; können
+to live; leben
+to fly; fliegen
+tour of; Rundgang durch
+Germany; Deutschland
+bye; tschüss
+goodbye; auf Wiedersehen
+garden; Garten
+the gardens are great; die Gärten sind großartig
+park; Park
+game; Spiel
+bag; Tasche
+ball; Ball
+bike; Fahrrad
+dog; Hund
+grass; Gras
+flower; Blume
+sandwich; Sandwich
+tree; Baum
+something; etwas
+blue; blau
+No that's wrong; Nein, das ist falsch
+Yes that is right; Ja, das ist richtig
+now; jetzt
+It is your turn; Du bist dran
+your; dein
+to spell; buchstabieren
+spelling; Rechtschreibung
+colour; Farbe
+red; rot
+yellow; gelb
+orange; orange
+blue; blau
+green; grün
+brown; braun
+pink; rosa
+purple; lila
+white; weiß
+black; schwarz
+to find ; finden
+banana; Banane
+to have; haben
+wrong; falsch
+school; Schule
+new; neu
+at; um / bei
+year; Jahr
+please; bitte
+uniform; Uniform
+awesome; super
+class; Klasse
+let me show you; lass es mich dir zeigen
+me; mich
+to show; zeigen
+our; unser
+classroom; Klassenzimmer
+we ; wir
+family; Familie
+families; Familien
+let us sing ; lass uns singen
+us; uns
+blazer; Blazer
+tie; Krawatte
+thing; Ding
+to know; wissen
+thank you; danke
+thanks; danke
+with; mit
+dot; Punkt
+double; doppelt
+to sit; sitzen
+together; zusammen
+Mr. Lee; Herr Lee
+Mrs. Lee; Frau Lee
+to teach; unterrichten
+art; Kunst
+history; Geschichte
+class teacher; Klassenlehrer
+poem; Gedicht
+day; Tag
+song; Lied
+book; Buch
+to go; gehen
+to speak; sprechen
+French; Französisch
+to read; lesen
+to watch a film; einen Film ansehen
+but; aber
+I don't have; Ich habe nicht
+so cool; so cool
+board; Tafel
+chair; Stuhl
+desk; Schreibtisch
+exercise book; Heft
+pencil case; Federmäppchen
+pencil; Bleistift
+schoolbag; Schultasche
+student; Schüler
+marker; Marker
+pen; Stift
+rubber; Radiergummi
+ruler; Lineal
+sharpner; Spitzer
+no; nein
+problem; Problem
+here you are; hier bitte
+Simon says; Simon sagt
+world; Welt
+Monday; Montag
+Tuesday; Dienstag
+Wednesday; Mittwoch
+Thursday; Donnerstag
+Friday; Freitag
+Saturday; Samstag
+Sunday; Sonntag
+on Monday; am Montag
+on Mondays; montags
+pet; Haustier
+cute; süß
+scary; gruselig
+boring; langweilig
+cat; Katze
+budgie; Wellensittich
+fish; Fisch
+guinea pig; Meerschweinchen
+parrot; Papagei
+rabbit; Kaninchen
+snake; Schlange
+spider; Spinne
+under; unter
+need; brauchen
+I do not like; Ich mag nicht
+more; mehr
+animal; Tier
+hobby; Hobby
+hobbies; Hobbys
+football; Fußball
+to run; rennen
+music; Musik
+to swim; schwimmen
+dance; Tanz
+what; was
+What about you?; Und du?
+if; wenn / ob
+to need; brauchen
+at home; zu Hause
+This is; Das ist
+street; Straße
+It's called; Es heißt
+road; Straße
+car; Auto
+house; Haus
+a lot of; viel / viele
+lots of; viel / viele
