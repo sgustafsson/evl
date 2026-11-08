@@ -144,9 +144,14 @@
         }
       });
 
-      $("#mode, #restart").on("change click", function () {
-        if (words.length) makeSequence();
-      });
+      $("#mode").on("change", function () {
+  if (words.length) makeSequence();
+});
+
+$("#restart").on("click", function () {
+  if (words.length) makeSequence();
+});
+
 
       $.get("vokabeln/liste.txt")
         .done(function (data) {
