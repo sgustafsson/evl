@@ -137,6 +137,13 @@
                 <input id="count" type="number" class="form-control" min="1" step="1">
                 <div id="countHint" class="form-text"></div>
             </div>
+
+            <div class="col-sm-6 col-md-4 d-flex align-items-end pb-1" id="ttsWrap">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="ttsToggle" role="switch">
+                    <label class="form-check-label" for="ttsToggle">Vorlesen 🔊</label>
+                </div>
+            </div>
         </div>
 
         <section class="card shadow-sm">
@@ -155,7 +162,11 @@
                 <div id="typeSection">
                     <div class="text-center mb-4">
                         <div class="text-secondary small mb-1">Tippe die Vokabel ab:</div>
-                        <div id="word" class="fs-2 fw-semibold"></div>
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <div id="word" class="fs-2 fw-semibold"></div>
+                            <button id="speakWord" type="button" class="btn btn-link p-0 fs-4 lh-1 text-secondary"
+                                title="Nochmal vorlesen" hidden>🔊</button>
+                        </div>
                     </div>
 
                     <label for="answer" class="form-label">Deine Eingabe</label>
@@ -183,7 +194,9 @@
                     </div>
 
                     <div class="text-secondary small text-center mb-3">
-                        Tippe auf die Karte, um die Übersetzung zu sehen.
+                        <span>Tippe auf die Karte, um die Übersetzung zu sehen.</span>
+                        <button id="speakCard" type="button" class="btn btn-link p-0 ms-1 fs-5 lh-1 text-secondary"
+                            title="Englisch vorlesen" hidden>🔊</button>
                     </div>
 
                     <div class="d-flex justify-content-between">
@@ -236,6 +249,57 @@
                 const next = $("html").attr("data-bs-theme") === "dark" ? "light" : "dark";
                 applyTheme(next);
                 localStorage.setItem("theme", next);
+            });
+
+            /* ---------- Vorlesen (Web Speech API) ---------- */
+
+            const ttsSupported = "speechSynthesis" in window;
+            let ttsEnabled = ttsSupported && localStorage.getItem("tts") !== "false";
+            let enVoice = null;
+
+            if (ttsSupported) {
+                function loadVoices() {
+                    const voices = window.speechSynthesis.getVoices();
+                    // Bevorzuge eine britische, sonst eine amerikanische oder andere englische Stimme.
+                    enVoice = voices.find(v => v.lang === "en-GB") ||
+                              voices.find(v => v.lang === "en-US") ||
+                              voices.find(v => v.lang.startsWith("en")) ||
+                              null;
+                }
+                loadVoices();
+                window.speechSynthesis.onvoiceschanged = loadVoices;
+
+                $("#ttsToggle").prop("checked", ttsEnabled);
+
+                $("#ttsToggle").on("change", function () {
+                    ttsEnabled = $(this).prop("checked");
+                    localStorage.setItem("tts", ttsEnabled);
+                    if (!ttsEnabled) window.speechSynthesis.cancel();
+                });
+            } else {
+                // Kein TTS verfügbar – Toggle ausblenden.
+                $("#ttsWrap").hide();
+            }
+
+            function speakEnglish(text) {
+                if (!ttsSupported) return;
+                window.speechSynthesis.cancel();
+                const utt = new SpeechSynthesisUtterance(text);
+                utt.lang = "en-GB";
+                if (enVoice) utt.voice = enVoice;
+                utt.rate = 0.9;
+                window.speechSynthesis.speak(utt);
+            }
+
+            // Replay-Buttons: sprechen immer den englischen Begriff, unabhängig vom Toggle.
+            $("#speakWord").on("click", function () {
+                const pair = sequence[currentIndex];
+                if (pair) speakEnglish(pair.en);
+            });
+
+            $("#speakCard").on("click", function () {
+                const pair = sequence[currentIndex];
+                if (pair) speakEnglish(pair.en);
             });
 
             /* ---------- Belohnung nach je 5 Vokabeln ---------- */
@@ -338,6 +402,8 @@
                 if (currentIndex >= sequence.length) {
                     $("#word").text("Geschafft!");
                     $("#answer").prop("disabled", true);
+                    $("#speakWord").prop("hidden", true);
+                    if (ttsSupported) window.speechSynthesis.cancel();
                     $("#message").text("Du hast alle Vokabeln geschafft.");
                     showDone();
                     return;
@@ -345,6 +411,8 @@
 
                 $("#answer").prop("disabled", false).trigger("focus");
                 $("#word").text(sequence[currentIndex].en);
+                if (ttsSupported) $("#speakWord").prop("hidden", false);
+                if (ttsEnabled) speakEnglish(sequence[currentIndex].en);
                 updateProgress();
             }
 
@@ -402,6 +470,8 @@
 
                 $("#prevCard").prop("disabled", currentIndex === 0);
                 $("#nextCard").text(currentIndex === sequence.length - 1 ? "Fertig" : "Weiter →");
+                if (ttsSupported) $("#speakCard").prop("hidden", false);
+                if (ttsEnabled) speakEnglish(pair.en);
 
                 updateProgress();
             }
