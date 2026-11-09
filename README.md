@@ -2,6 +2,8 @@
 
 Englisch Vokabeln lernen
 
+🔗 **[trainer.html öffnen](https://sgustafsson.github.io/evl/trainer.html)**
+
 ## trainer.html
 
 Ein einfacher Vokabeltrainer als eigenständige HTML-Seite (Bootstrap 5 + jQuery). Die Oberfläche ist auf Deutsch.
