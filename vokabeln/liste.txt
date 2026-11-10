@@ -189,3 +189,49 @@ car; Auto
 house; Haus
 a lot of; viel / viele
 lots of; viel / viele
+postman; Postbote
+morning; Morgen
+doorbell; Türklingel
+bell; Glocke
+maybe; vielleicht
+dad; Vater
+come; kommen
+so; so
+you're; du bist
+her class; ihre Klasse
+upstairs; oben
+downstairs; unten
+room; Zimmer / Raum
+why; warum
+an hour; eine Stunde
+for; für
+he/she/it isn't here; er/sie/es ist nicht hier
+sorry; Entschuldigung
+who; wer
+brother; Bruder
+sister; Schwester
+Yes, I am; Ja, das bin ich
+See you; Bis bald
+You're lucky; Du hast Glück
+sure; sicher
+smile; lächeln
+sometimes; manchmal
+weird; seltsam
+at school; in der Schule
+she's; sie ist
+they aren't; sie sind nicht
+they're; sie sind
+divorced; geschieden
+parents; Eltern
+to listen; zuhören
+message; Nachricht
+free; frei
+hang out; abhängen
+at my place; bei mir
+primary school; Grundschule
+again; wieder
+Good morning; Guten Morgen
+Here's; Hier ist
+Here are; Hier sind
+parcel; Paket
+

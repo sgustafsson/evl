@@ -169,6 +169,7 @@
                 <label for="mode" class="form-label">Reihenfolge</label>
                 <select id="mode" class="form-select">
                     <option value="order">Dateireihenfolge</option>
+                    <option value="reverse">Umgekehrte Dateireihenfolge</option>
                     <option value="alpha">Alphabetisch</option>
                     <option value="random">Zufällig</option>
                 </select>
@@ -380,7 +381,9 @@
 
                 const order = $("#mode").val();
 
-                if (order === "alpha") {
+                if (order === "reverse") {
+                    sequence.reverse();
+                } else if (order === "alpha") {
                     // Alphabetisch nach dem englischen Begriff.
                     sequence.sort((a, b) => a.en.localeCompare(b.en, "en"));
                 } else if (order === "random") {
