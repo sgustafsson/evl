@@ -259,7 +259,7 @@
         <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content text-center">
                 <div class="modal-body p-4">
-                    <img id="rewardAvatar" alt="Belohnungs-Avatar" width="120" height="120" class="mb-3">
+                    <img src="undraw_happy_fsrv.svg" alt="Geschafft!" width="180" class="mb-3">
                     <h5 class="mb-1">Super gemacht! 🎉</h5>
                     <p id="rewardText" class="text-secondary mb-3"></p>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Weiter</button>
@@ -357,10 +357,6 @@
             ];
 
             function celebrate(completed) {
-                const style = AVATAR_STYLES[Math.floor(Math.random() * AVATAR_STYLES.length)];
-                const seed = Math.random().toString(36).slice(2);
-                $("#rewardAvatar").attr("src",
-                    "https://api.dicebear.com/9.x/" + style + "/svg?seed=" + seed);
                 $("#rewardText").text(completed + " Vokabeln geschafft!");
                 rewardModal.show();
             }
