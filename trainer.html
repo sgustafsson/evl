@@ -45,7 +45,7 @@
 
         /* Heller Modus (Standard). */
         body {
-            background-color: #FFFFFF;
+            background-color: #F0F3F5;
         }
 
         /* Dunkler Modus: eigene Hintergrund- und Kartenfarben. */
@@ -105,15 +105,17 @@
             -webkit-backface-visibility: hidden;
         }
 
-        .flip-card-front {
-            background: #F5F6F7;
-            border: 1px solid #a0aab4;
-        }
-
         /* Karte im hellen Modus abdunkeln. */
         .card {
-            background-color: #F5F6F7;
+            background-color: #FFFFFF;
             border-color: #a0aab4 !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10) !important;
+        }
+
+        .flip-card-front {
+            background: #FFFFFF;
+            border: 1px solid #a0aab4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
         }
 
         .flip-card-back {
