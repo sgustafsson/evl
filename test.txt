@@ -1,1 +1,1 @@
-API_KEY = "1nkdlk2323nlffknk238259"
+"aws_secret_access_key = xyzrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
