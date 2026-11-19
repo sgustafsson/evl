@@ -234,4 +234,28 @@ Good morning; Guten Morgen
 Here's; Hier ist
 Here are; Hier sind
 parcel; Paket
+very big; sehr groß; 19.11.2026
+understand; verstehen; 19.11.2026
+father; Vater; 19.11.2026
+mother; Mutter; 19.11.2026
+useful; nützlich; 19.11.2026
+phrase; Satz, Ausdruck; 19.11.2026
+grandma; Oma; 19.11.2026
+grandpa; Opa; 19.11.2026
+aunt; Tante; 19.11.2026
+uncle; Onkel; 19.11.2026
+cousin; Cousin/e ; 19.11.2026
+some; einige; 19.11.2026
+English; Englisch; 19.11.2026
+word; Wort; 19.11.2026
+like words in other languages; wie Wörter in anderen Sprachen; 19.11.2026
+other; andere; 19.11.2026
+language; Sprache; 19.11.2026
+e.g.; z.B.; 19.11.2026
+to help; helfen; 19.11.2026
+help; Hilfe; 19.11.2026
+when; wenn; 19.11.2026
+to learn; lernen; 19.11.2026
+to talk; reden, sich unterhalten; 19.11.2026
+people; Leute, Menschen; 19.11.2026
 

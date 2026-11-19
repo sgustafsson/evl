@@ -176,6 +176,13 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
+                <label for="dateFilter" class="form-label">Lerneinheit</label>
+                <select id="dateFilter" class="form-select">
+                    <option value="">Alle Vokabeln</option>
+                </select>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
                 <label for="count" class="form-label">Anzahl Vokabeln</label>
                 <input id="count" type="number" class="form-control" min="1" step="1">
                 <div id="countHint" class="form-text"></div>
@@ -376,8 +383,21 @@
                 return $("#trainMode").val();
             }
 
+            function filteredWords() {
+                const f = $("#dateFilter").val();
+                if (f === "none") return words.filter(w => !w.date);
+                if (f)           return words.filter(w => w.date === f);
+                return words;
+            }
+
+            function updateCountForFilter() {
+                const max = filteredWords().length;
+                $("#count").attr("max", max).val(max);
+                $("#countHint").text("1 … " + max);
+            }
+
             function makeSequence() {
-                sequence = [...words];
+                sequence = [...filteredWords()];
 
                 const order = $("#mode").val();
 
@@ -403,7 +423,7 @@
 
             // Liest die Anzahl-Eingabe und begrenzt sie auf 1 … Anzahl der Vokabeln.
             function clampedCount() {
-                const max = words.length;
+                const max = filteredWords().length;
                 let n = parseInt($("#count").val(), 10);
                 if (isNaN(n)) n = max;
                 return Math.max(1, Math.min(n, max));
@@ -553,6 +573,10 @@
                 if (words.length) makeSequence();
             });
 
+            $("#dateFilter").on("change", function () {
+                if (words.length) { updateCountForFilter(); makeSequence(); }
+            });
+
             $("#count").on("change", function () {
                 // Eingabe auf den gültigen Bereich zurückschreiben und neu starten.
                 $(this).val(clampedCount());
@@ -571,14 +595,12 @@
                         .map(line => line.trim())
                         .filter(line => line.length > 0)
                         .map(line => {
-                            // Trennzeichen zwischen Englisch und Deutsch ist ";".
-                            const sep = line.indexOf(";");
-                            if (sep === -1) {
-                                return { en: line, de: line };
-                            }
+                            // Format: "English; Deutsch" oder "English; Deutsch; TT.MM.JJJJ"
+                            const parts = line.split(";").map(p => p.trim());
                             return {
-                                en: line.slice(0, sep).trim(),
-                                de: line.slice(sep + 1).trim()
+                                en:   parts[0],
+                                de:   parts[1] !== undefined ? parts[1] : parts[0],
+                                date: parts[2] || null
                             };
                         });
 
@@ -588,12 +610,23 @@
                         return;
                     }
 
+                    // Lerneinheiten-Dropdown befüllen.
+                    const dates = [...new Set(words.map(w => w.date).filter(Boolean))].sort(
+                        (a, b) => {
+                            // TT.MM.JJJJ → sortierbar machen.
+                            const toISO = d => d.split(".").reverse().join("-");
+                            return toISO(a).localeCompare(toISO(b));
+                        }
+                    );
+                    const $df = $("#dateFilter");
+                    $df.find("option:not(:first)").remove();
+                    if (words.some(w => !w.date)) {
+                        $df.append($("<option>").val("none").text("vor dem 19.11.2026"));
+                    }
+                    dates.forEach(d => $df.append($("<option>").val(d).text(d)));
+
                     $("#restart").prop("disabled", false);
-
-                    // Anzahl-Eingabe auf die geladene Vokabelzahl einstellen (Standard: alle).
-                    $("#count").attr("max", words.length).val(words.length);
-                    $("#countHint").text("1 … " + words.length);
-
+                    updateCountForFilter();
                     makeSequence();
                 })
                 .fail(function () {
